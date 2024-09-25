@@ -1,0 +1,162 @@
+/* CART */
+
+section.cart{
+	width: 100%;
+	padding: 100px 0;
+	background-color: #f1f1f1;
+	position: relative;
+}
+
+section.cart h1.cart-message{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 20px;
+	background-color: /*#e53935*/ white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-weight: 500;
+	color: #f40643;
+	font-size: 18px;
+	overflow: hidden;
+	transition: 0.3s;
+	opacity: 0;
+	z-index: -1;
+}
+
+section.cart h1.cart-message-active{
+	opacity: 1;
+	z-index: 0;
+}
+
+section.cart h1.cart-message div.cart-message-loading{
+	height: 2px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+section.cart h1.cart-message div.cart-message-loading-active{
+	animation-name: loadingCart;
+	animation-duration: 3.1s;
+	width: 100%;
+	background-color: #e53935;
+}
+
+@keyframes loadingCart{
+	0%{
+		width: 0;
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+
+section.cart div.w50{
+	padding: 0 10px;
+}
+
+section.cart form{
+	background-color: white;
+	border-radius: 15px;
+	padding: 30px 30px;
+}
+
+section.cart form h1{
+	color: #f40643;
+	margin-bottom: 20px;
+}
+
+section.cart form label{
+	padding-left: 10px;
+	color: #ccc;
+}
+
+section.cart form input[type="text"],
+section.cart form input[type='email'],
+section.cart form input[type='date']{
+	border: 1px solid #f1f1f1;
+	outline: none;
+	border-radius: 15px;
+	padding: 10px 15px;
+	background-color: #f1f1f1;
+	transition: 0.3s;
+	width: 100%;
+	margin: 5px 0 15px 0;
+}
+
+section.cart form input[type="text"]:focus,
+section.cart form input[type='email']:focus,
+section.cart form input[type='date']:focus{
+	border: 1px solid #ccc;
+}
+
+section.cart form input[type="submit"]{
+	padding: 10px 20px;
+	border-radius: 15px;
+	background-color: #f40643;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+section.cart div.box-informacoes{
+	background-color: white;
+	border-radius: 15px;
+	padding: 30px 30px;
+}
+
+section.cart div.box-informacoes h1{
+	color: #f40643;
+	margin-bottom: 20px;
+}
+
+section.cart div.box-informacoes h3{
+	font-weight: 400;
+	color: #ccc;
+	margin-bottom: 15px;
+}
+
+section.cart div.box-informacoes h3 span{
+	color: #444;
+	font-weight: 400;
+	padding-left: 5px;
+}
+
+section.cart div.box-informacoes div.w100{
+	justify-content: space-between;
+	position: relative;
+	top: 5px;
+}
+
+section.cart div.box-informacoes div.w100 h2{
+	color: #f40643;
+}
+
+section.cart div.box-informacoes div.w100 a{
+	position: relative;
+	top: 5px;
+	color: #ccc;
+}
+
+@media screen and (max-width: 768px){
+
+	section.cart > div.container{
+		flex-wrap: wrap;
+	}
+
+	section.cart div.w50{
+		width: 100%;
+		margin: 0;
+	}
+
+	section.cart div.w50:nth-of-type(1){
+		margin-bottom: 20px;
+	}
+
+}
